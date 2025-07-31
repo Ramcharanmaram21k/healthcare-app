@@ -1,0 +1,203 @@
+doctor-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.doctor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  border-color: #3b82f6;
+}
+
+.doctor-card:hover::before {
+  transform: scaleX(1);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.doctor-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f1f5f9;
+  transition: border-color 0.3s ease;
+}
+
+.doctor-card:hover .doctor-image {
+  border-color: #3b82f6;
+}
+
+.doctor-details {
+  flex: 1;
+}
+
+.doctor-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.doctor-specialization {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  font-weight: 500;
+}
+
+.doctor-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rating-experience {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f59e0b;
+}
+
+.experience {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.location-icon {
+  font-size: 16px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+}
+
+.status-available {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.status-booked {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.status-leave {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.status-default {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .doctor-card {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .doctor-info {
+    gap: 12px;
+  }
+  
+  .doctor-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .doctor-name {
+    font-size: 18px;
+  }
+  
+  .rating-experience {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctor-card {
+    padding: 14px;
+  }
+  
+  .doctor-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .doctor-image {
+    align-self: center;
+  }
+  
+  .doctor-meta {
+    gap: 10px;
+  }
+  
+  .rating-experience {
+    justify-content: center;
+  }
+}
