@@ -1,12 +1,13 @@
-// App.js
+
 import React, { useState } from 'react';
-import LandingPage from './components/LandingPage/';
-import DoctorProfile from './components/DoctorProfile/';
-import DoctorCard from './components/DoctorCard/'
-import BookingForm from './components/BookingForm/';
-import ConfirmationMessage from './components/ConfirmationMessage';
-import { doctorsData } from './components/doctorsData';
-import './App.css';
+import LandingPage from './components/LandingPage/LandingPage';
+import DoctorProfile from './components/DoctorProfile/DoctorProfile';
+//import DoctorCard from '../components/DoctorCard';
+import BookingForm from './components/BookingForm/BookingForm';
+import ConfirmationMessage from './components/ConfirmationMessage/ConfirmationMessage';
+import { doctorsData } from './doctorsData';
+import './app.css';
+
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('landing');

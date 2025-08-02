@@ -1,12 +1,13 @@
-// components/SearchBar.js
+
 import React from 'react';
-import '../styles/SearchBar.css';
+import { FaSearch } from 'react-icons/fa';
+import './SearchBar.css';
 
 const SearchBar = ({ searchTerm, setSearchTerm }) => {
   return (
     <div className="search-container">
       <div className="search-input-wrapper">
-        <span className="search-icon">🔍</span>
+        <FaSearch className="search-icon" />
         <input
           type="text"
           placeholder="Search by doctor name or specialization..."

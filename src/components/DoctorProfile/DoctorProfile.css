@@ -57,6 +57,42 @@
   flex-wrap: wrap;
 }
 
+
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+
+
+
+.contact-item .contact-icon.fa-phone {
+  color: #28a745;
+  fill: #28a745; 
+}
+
+.contact-item .contact-icon.fa-envelope {
+  color: #007bff;
+  fill: #007bff; 
+}
+
+.contact-item .contact-icon.fa-map-marker-alt {
+  color: #dc3545;
+  fill: #dc3545; 
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+
+.rating-icon {
+  color: #f59e0b; 
+  font-size: 1.25rem;
+}
+
 .rating {
   background: rgba(255, 255, 255, 0.2);
   padding: 0.25rem 0.5rem;
@@ -67,6 +103,7 @@
 .experience {
   opacity: 0.9;
   font-size: 0.95rem;
+  color: #d1fae5;
 }
 
 .profile-content {

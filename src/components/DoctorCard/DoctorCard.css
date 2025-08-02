@@ -99,9 +99,23 @@ doctor-card {
   color: #f59e0b;
 }
 
+.rating-icon {
+  color: #ffc107; 
+}
+
+.location-icon {
+  color: #dc3545; 
+}
+
+
+.doctor-meta .experience {
+  color: #4a00a5;
+  font-size: 14px;
+  font-weight: 500;
+}
 .experience {
   font-size: 14px;
-  color: #64748b;
+  color: #4a00a5;
   font-weight: 500;
 }
 
@@ -182,6 +196,7 @@ doctor-card {
   .doctor-card {
     padding: 14px;
   }
+
   
   .doctor-info {
     flex-direction: column;

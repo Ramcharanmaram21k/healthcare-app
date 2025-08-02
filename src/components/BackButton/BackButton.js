@@ -1,6 +1,6 @@
-// components/BackButton.js
+
 import React from 'react';
-import '../styles/BackButton.css';
+import './BackButton.css';
 
 const BackButton = ({ onClick, children }) => {
   return (

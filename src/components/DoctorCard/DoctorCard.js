@@ -1,6 +1,7 @@
-// components/DoctorCard.js
+
 import React from 'react';
-import '../styles/DoctorCard.css';
+import { FaStar, FaMapMarkerAlt } from 'react-icons/fa';
+import './DoctorCard.css';
 
 const DoctorCard = ({ doctor, onClick }) => {
   const getStatusClass = (status) => {
@@ -33,12 +34,13 @@ const DoctorCard = ({ doctor, onClick }) => {
         
         <div className="doctor-meta">
           <div className="rating-experience">
-            <span className="rating">⭐ {doctor.rating}</span>
+            <FaStar className="rating-icon" /> 
+            <span className="rating">{doctor.rating}</span>
             <span className="experience">{doctor.experience} experience</span>
           </div>
           
           <div className="location">
-            <span className="location-icon">📍</span>
+            <FaMapMarkerAlt className="location-icon" />
             <span className="location-text">{doctor.location}</span>
           </div>
           

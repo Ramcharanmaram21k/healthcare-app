@@ -1,7 +1,7 @@
 // components/ConfirmationMessage.js
 import React from 'react';
-import { doctorsData } from '../data/doctorsData';
-import '../styles/ConfirmationMessage.css';
+import { doctorsData } from '../../doctorsData';
+import './ConfirmationMessage.css';
 
 const ConfirmationMessage = ({ bookingForm }) => {
   const doctor = doctorsData.find(d => d.id === bookingForm.doctorId);

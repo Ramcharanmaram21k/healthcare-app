@@ -1,17 +1,17 @@
-// components/BookingForm.js
 import React from 'react';
-import BackButton from './BackButton';
-import { doctorsData } from '../data/doctorsData';
-import '../styles/BookingForm.css';
+import BackButton from '../BackButton/BackButton';
+import { doctorsData } from '../../doctorsData';
+import { FaUser, FaEnvelope, FaCalendarAlt, FaClock } from 'react-icons/fa'; 
+import './BookingForm.css';
 
-const BookingForm = ({ 
-  bookingForm, 
-  setBookingForm, 
-  setCurrentPage, 
-  handleFormSubmit 
+const BookingForm = ({
+  bookingForm,
+  setBookingForm,
+  setCurrentPage,
+  handleFormSubmit
 }) => {
   const doctor = doctorsData.find(d => d.id === bookingForm.doctorId);
-  
+
   const getCurrentDate = () => {
     const today = new Date();
     return today.toISOString().split('T')[0];
@@ -20,11 +20,11 @@ const BookingForm = ({
   const getAvailableTimes = (doctorId, selectedDate) => {
     const doctorInfo = doctorsData.find(d => d.id === doctorId);
     if (!doctorInfo) return [];
-    
+
     const date = new Date(selectedDate);
     const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
     const dayName = dayNames[date.getDay()];
-    
+
     return doctorInfo.schedule[dayName] || [];
   };
 
@@ -39,9 +39,9 @@ const BookingForm = ({
   };
 
   const isFormValid = () => {
-    return bookingForm.patientName && 
-           bookingForm.email && 
-           bookingForm.date && 
+    return bookingForm.patientName &&
+           bookingForm.email &&
+           bookingForm.date &&
            bookingForm.time;
   };
 
@@ -62,7 +62,7 @@ const BookingForm = ({
             <div className="form-group">
               <label className="form-label">Patient Name *</label>
               <div className="input-wrapper">
-                <span className="input-icon">👤</span>
+                <FaUser className="input-icon" /> 
                 <input
                   type="text"
                   className="form-input"
@@ -76,7 +76,7 @@ const BookingForm = ({
             <div className="form-group">
               <label className="form-label">Email Address *</label>
               <div className="input-wrapper">
-                <span className="input-icon">✉️</span>
+                <FaEnvelope className="input-icon" /> 
                 <input
                   type="email"
                   className="form-input"
@@ -90,7 +90,7 @@ const BookingForm = ({
             <div className="form-group">
               <label className="form-label">Preferred Date *</label>
               <div className="input-wrapper">
-                <span className="input-icon">📅</span>
+                <FaCalendarAlt className="input-icon" /> 
                 <input
                   type="date"
                   className="form-input"
@@ -112,7 +112,7 @@ const BookingForm = ({
                       className={`time-btn ${bookingForm.time === time ? 'selected' : ''}`}
                       onClick={() => handleInputChange('time', time)}
                     >
-                      <span className="time-icon">🕐</span>
+                      <FaClock className="time-icon" /> 
                       {time}
                     </button>
                   ))}

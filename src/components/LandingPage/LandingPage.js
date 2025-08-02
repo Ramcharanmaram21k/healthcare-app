@@ -1,8 +1,8 @@
-// components/LandingPage.js
+
 import React from 'react';
-import SearchBar from './SearchBar';
-import DoctorCard from './DoctorCard';
-import '../styles/LandingPage.css';
+import SearchBar from '../SearchBar/SearchBar';
+import DoctorCard from '../DoctorCard/DoctorCard';
+import './LandingPage.css';
 
 const LandingPage = ({ 
   filteredDoctors, 

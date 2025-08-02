@@ -10,6 +10,8 @@
   padding: 0 20px;
 }
 
+
+
 .booking-card {
   background: #ffffff;
   border-radius: 20px;
@@ -65,7 +67,8 @@
 .input-icon {
   position: absolute;
   left: 16px;
-  font-size: 16px;
+  font-size: 18px; 
+  color: #6b7280; 
   z-index: 1;
   pointer-events: none;
 }
@@ -134,6 +137,7 @@
 
 .time-icon {
   font-size: 16px;
+  color: #6b7280; 
 }
 
 .no-times-message {
@@ -164,7 +168,7 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-top: 8px;
+  margin-top: 32px; 
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
@@ -189,36 +193,36 @@
   .booking-page {
     padding: 16px 0;
   }
-  
+
   .container {
     padding: 0 16px;
   }
-  
+
   .booking-header {
     padding: 24px;
   }
-  
+
   .booking-title {
     font-size: 28px;
   }
-  
+
   .booking-subtitle {
     font-size: 16px;
   }
-  
+
   .booking-form {
     padding: 24px;
   }
-  
+
   .form-group {
     margin-bottom: 20px;
   }
-  
+
   .time-grid {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 10px;
   }
-  
+
   .time-btn {
     padding: 12px 14px;
     font-size: 13px;
@@ -230,28 +234,41 @@
     border-radius: 16px;
     margin: 0 8px;
   }
-  
+
   .booking-header {
     padding: 20px;
   }
-  
+
   .booking-title {
     font-size: 24px;
   }
-  
+
   .booking-form {
     padding: 20px;
   }
-  
+
   .form-input {
     padding: 14px 14px 14px 44px;
   }
-  
+
   .time-grid {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .submit-btn {
     padding: 16px 20px;
+    margin-top: 32px !important;
   }
+}
+
+
+.search-input:focus,
+.book-btn:focus, 
+.submit-btn:focus { 
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.back-btn {
+  margin-bottom: 20px; 
 }

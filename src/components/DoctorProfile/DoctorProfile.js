@@ -1,7 +1,8 @@
 // components/DoctorProfile.js
 import React from 'react';
-import BackButton from './BackButton';
-import '../styles/DoctorProfile.css';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import BackButton from '../BackButton/BackButton';
+import './DoctorProfile.css';
 
 const DoctorProfile = ({ 
   selectedDoctor, 
@@ -53,15 +54,15 @@ const DoctorProfile = ({
                 <h2 className="section-title">Contact Information</h2>
                 <div className="contact-info">
                   <div className="contact-item">
-                    <span className="contact-icon">📞</span>
+                    <FaPhone style={{ color: '#28a745' }} className="contact-icon" /> 
                     <span className="contact-text">{selectedDoctor.phone}</span>
                   </div>
                   <div className="contact-item">
-                    <span className="contact-icon">✉️</span>
+                    <FaEnvelope style={{ color: '#007bff' }} className="contact-icon" /> 
                     <span className="contact-text">{selectedDoctor.email}</span>
                   </div>
                   <div className="contact-item">
-                    <span className="contact-icon">📍</span>
+                    <FaMapMarkerAlt style={{ color: '#dc3545' }} className="contact-icon" /> 
                     <span className="contact-text">{selectedDoctor.location}</span>
                   </div>
                 </div>
