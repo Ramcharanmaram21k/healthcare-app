@@ -1,6 +1,6 @@
 # Healthcare Appointment Booking App
 
-This project is a single-page application for booking appointments with top healthcare professionals.
+This project is a single-page application for booking appointments with healthcare professionals. Users can browse a list of doctors, view detailed profiles, and book appointments through a simple form.
 
 ### Live Project Link
 [View Live Project](https://healthcare-app-blue.vercel.app/)
